@@ -1,0 +1,49 @@
+//Maya ASCII 2017ff05 scene
+//Name: Bruce_01.history
+//Last modified: Thu, Jun 22, 2017 04:25:16 PM
+//Codeset: 1252
+requires maya "2017ff05";
+requires "stereoCamera" "10.0";
+requires "stereoCamera" "10.0";
+currentUnit -l centimeter -a degree -t pal;
+fileInfo "fileCreationSource" "ExportEdits";
+createNode transform -n "Bruce_01_:rigDefault";
+	rename -uid "FE53D8B5-406F-6CBA-C865-C5A83D63CC80";
+	setAttr ".rp" -type "double3" 0 0 1.1102230246251565e-016 ;
+	setAttr ".sp" -type "double3" 0 0 1.1102230246251565e-016 ;
+connectAttr "Bruce_01_:rigDefault.msg" "<root>:Bruce_01_RN.asn[0]";
+connectAttr "Bruce_01_:rigDefault.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na
+		;
+connectAttr "Bruce_01_:ROOT.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na;
+connectAttr "Bruce_01_:input_GRP.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na
+		;
+connectAttr "Bruce_01_:Bruce_01_:modelDefault.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:Bruce_01_:ROOT.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:Bruce_01_:bruce_PLY.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:Bruce_01_:bruce_PLYShape.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:bruce_PLY_parentConstraint1.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:controls_GRP.iog" "<root>:Bruce_01__rigDefault__CON.dsm" 
+		-na;
+connectAttr "<root>:control_CTL_translateX.o" "Bruce_01_:control_CTL.tx";
+connectAttr "<root>:control_CTL_translateY.o" "Bruce_01_:control_CTL.ty";
+connectAttr "<root>:control_CTL_translateZ.o" "Bruce_01_:control_CTL.tz";
+connectAttr "Bruce_01_:control_CTL.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na
+		;
+connectAttr "Bruce_01_:control_CTLShape.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:geometry_GRP.iog" "<root>:Bruce_01__rigDefault__CON.dsm" 
+		-na;
+connectAttr "Bruce_01_:bruce_PLY.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na
+		;
+connectAttr "Bruce_01_:bruce_PLYShape.iog" "<root>:Bruce_01__rigDefault__CON.dsm"
+		 -na;
+connectAttr "Bruce_01_:makeNurbCircle1.msg" "<root>:Bruce_01__rigDefault__CON.dnsm"
+		 -na;
+connectAttr "Bruce_01_:Bruce_01_:bruce_PLYShape1_transformGeometry.msg" "<root>:Bruce_01__rigDefault__CON.dnsm"
+		 -na;
+// End of Bruce_01.history

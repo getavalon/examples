@@ -1,0 +1,20 @@
+schema = "avalon-core:inventory-1.0"
+
+[[assets]]
+name = "Bruce"
+label = "Bruce Wayne"
+
+[[assets]]
+name = "Joker"
+label = "The Joker"
+
+[[film]]
+name = "shot1"
+edit_in = 1000
+edit_out = 1143
+
+[[film]]
+name = "shot2"
+edit_in = 1000
+edit_out = 1081
+

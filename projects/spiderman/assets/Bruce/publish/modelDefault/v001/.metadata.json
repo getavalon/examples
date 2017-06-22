@@ -1,0 +1,50 @@
+{
+    "families": [
+        "mindbender.model"
+    ], 
+    "parent": null, 
+    "locations": [], 
+    "representations": [
+        {
+            "path": "{dirname}/modelDefault{format}", 
+            "format": ".ma", 
+            "context": {
+                "subset": "modelDefault", 
+                "project": "spiderman", 
+                "version": 1, 
+                "asset": "Bruce", 
+                "representation": "ma", 
+                "silo": "assets"
+            }, 
+            "schema": "avalon-core:representation-1.0"
+        }
+    ], 
+    "timeFormat": "%Y%m%dT%H%M%SZ", 
+    "path": "C:/Users/marcus/Dropbox/projects/avalon/avalon-setup/git/avalon-examples/projects/spiderman/assets/Bruce/publish/modelDefault/v001", 
+    "data": {
+        "subset": "modelDefault", 
+        "files": [
+            "modelDefault.ma"
+        ], 
+        "families": [
+            "mindbender.model"
+        ], 
+        "name": "modelDefault", 
+        "family": "mindbender.model", 
+        "author": "marcus", 
+        "comment": "", 
+        "source": "{root}/spiderman/assets/Bruce/work/modeling/maya/scenes/model_v001.ma", 
+        "stagingDir": "C:\\Users\\marcus\\Dropbox\\projects\\avalon\\avalon-setup\\git\\avalon-examples\\projects\\spiderman\\assets\\Bruce\\work\\modeling\\maya\\stage\\modelDefault\\20170622T160459Z", 
+        "asset": "Bruce", 
+        "time": "20170622T160459Z", 
+        "id": "pyblish.avalon.instance"
+    }, 
+    "silo": "assets", 
+    "name": 1, 
+    "author": "marcus", 
+    "source": "{root}/assets/Bruce/work/modeling/maya/scenes/model_v001.ma", 
+    "version": 1, 
+    "time": "20170622T160459Z", 
+    "type": "version", 
+    "schema": "avalon-core:version-1.0"
+}

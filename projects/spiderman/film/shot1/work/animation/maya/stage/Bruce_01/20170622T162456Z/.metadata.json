@@ -1,0 +1,81 @@
+{
+    "families": [
+        "mindbender.animation"
+    ], 
+    "parent": null, 
+    "locations": [], 
+    "representations": [
+        {
+            "path": "{dirname}/Bruce_01{format}", 
+            "format": ".history", 
+            "context": {
+                "subset": "Bruce_01", 
+                "project": "spiderman", 
+                "version": 1, 
+                "asset": "shot1", 
+                "representation": "history", 
+                "silo": "film"
+            }, 
+            "schema": "avalon-core:representation-1.0"
+        }, 
+        {
+            "path": "{dirname}/Bruce_01{format}", 
+            "format": ".abc", 
+            "context": {
+                "subset": "Bruce_01", 
+                "project": "spiderman", 
+                "version": 1, 
+                "asset": "shot1", 
+                "representation": "abc", 
+                "silo": "film"
+            }, 
+            "schema": "avalon-core:representation-1.0"
+        }, 
+        {
+            "path": "{dirname}/Bruce_01{format}", 
+            "format": ".curves", 
+            "context": {
+                "subset": "Bruce_01", 
+                "project": "spiderman", 
+                "version": 1, 
+                "asset": "shot1", 
+                "representation": "curves", 
+                "silo": "film"
+            }, 
+            "schema": "avalon-core:representation-1.0"
+        }
+    ], 
+    "timeFormat": "%Y%m%dT%H%M%SZ", 
+    "path": "C:/Users/marcus/Dropbox/projects/avalon/avalon-setup/git/avalon-examples/projects/spiderman/film/shot1/publish/Bruce_01/v001", 
+    "data": {
+        "subset": "Bruce_01", 
+        "files": [
+            "Bruce_01.history", 
+            "Bruce_01.abc", 
+            "Bruce_01.curves"
+        ], 
+        "families": [
+            "mindbender.animation"
+        ], 
+        "name": "Bruce_01", 
+        "family": "mindbender.animation", 
+        "author": "marcus", 
+        "endFrame": 1143.0, 
+        "comment": "An amazing animation\nThe cube is moving back and forth violently and passionately", 
+        "source": "{root}/spiderman/film/shot1/work/animation/maya/scenes/animation_v001.ma", 
+        "stagingDir": "C:\\Users\\marcus\\Dropbox\\projects\\avalon\\avalon-setup\\git\\avalon-examples\\projects\\spiderman\\film\\shot1\\work\\animation\\maya\\stage\\Bruce_01\\20170622T162456Z", 
+        "dependencies": "594bddf55f8c1b7e2ceb3da0", 
+        "asset": "shot1", 
+        "time": "20170622T162456Z", 
+        "startFrame": 1000.0, 
+        "id": "pyblish.avalon.instance"
+    }, 
+    "silo": "film", 
+    "name": 1, 
+    "author": "marcus", 
+    "source": "{root}/film/shot1/work/animation/maya/scenes/animation_v001.ma", 
+    "version": 1, 
+    "time": "20170622T162456Z", 
+    "type": "version", 
+    "schema": "avalon-core:version-1.0"
+}
