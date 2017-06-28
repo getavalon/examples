@@ -1,0 +1,50 @@
+[
+    {
+        "message": "Modeling..",
+        "session": {
+            "app": "mayapy2016",
+            "project": "batman",
+            "asset": "Bruce",
+            "silo": "assets",
+            "config": "polly",
+            "task": "modeling"
+        },
+        "resources": [
+            "resources/Bruce_modelDefault_v001.ma",
+            "resources/Bruce_modelDefault_v002.ma",
+            "resources/Bruce_modelDefault_v003.ma"
+        ]
+    },
+    {
+        "message": "Rigging..",
+        "session": {
+            "app": "mayapy2016",
+            "project": "batman",
+            "asset": "Bruce",
+            "silo": "assets",
+            "config": "polly",
+            "task": "rigging"
+        },
+        "resources": [
+            "resources/Bruce_rigDefault_v003.ma",
+            "resources/Bruce_rigDefault_v006.ma"
+        ]
+    },
+    {
+        "message": "Animating..",
+        "session": {
+            "app": "mayapy2016",
+            "project": "batman",
+            "asset": "shot1",
+            "silo": "film",
+            "config": "polly",
+            "task": "animation"
+        },
+        "resources": [
+            "resources/shot1_Bruce_01_v002.ma",
+            "resources/shot1_Bruce_01_v006.ma",
+            "resources/shot1_Bruce_01_v012.ma",
+            "resources/shot1_Bruce_01_v034.ma"
+        ]
+    }
+]
