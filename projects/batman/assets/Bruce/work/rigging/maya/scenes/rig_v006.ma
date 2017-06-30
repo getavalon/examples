@@ -2,8 +2,8 @@
 //Name: rig_v001.ma
 //Last modified: Tue, Jun 27, 2017 12:20:41 PM
 //Codeset: 1252
-file -rdi 1 -ns "Bruce_01_" -rfn "Bruce_01_RN" "$AVALON_PROJECTS/spiderman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma";
-file -r -ns "Bruce_01_" -dr 1 -rfn "Bruce_01_RN" "$AVALON_PROJECTS/spiderman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma";
+file -rdi 1 -ns "Bruce_01_" -rfn "Bruce_01_RN" "$AVALON_PROJECTS/batman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma";
+file -r -ns "Bruce_01_" -dr 1 -rfn "Bruce_01_RN" "$AVALON_PROJECTS/batman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma";
 requires maya "2015";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
@@ -112,7 +112,7 @@ createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "Bruce_01_RN";
-	setAttr ".fn[0]" -type "string" "C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/spiderman/assets/Bruce/publish/modelDefault/v002/modelDefault.ma";
+	setAttr ".fn[0]" -type "string" "$AVALON_PROJECTS/batman/assets/Bruce/publish/modelDefault/v002/modelDefault.ma";
 	setAttr -s 15 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
@@ -183,7 +183,7 @@ createNode objectSet -n "Bruce_01__modelDefault__CON";
 	setAttr ".name" -type "string" "modelDefault";
 	setAttr ".namespace" -type "string" "Bruce_01_";
 	setAttr ".loader" -type "string" "ModelLoader";
-	setAttr ".project" -type "string" "spiderman";
+	setAttr ".project" -type "string" "batman";
 	setAttr ".asset" -type "string" "Bruce";
 	setAttr ".subset" -type "string" "modelDefault";
 	setAttr ".version" 1;
@@ -289,6 +289,6 @@ connectAttr "controls_SET.msg" "rigDefault.dnsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "bruce_PLYShape.iog" ":initialShadingGroup.dsm" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"Bruce_01_RN\" \"\" \"$AVALON_PROJECTS/spiderman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma\" 33651880 \"C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/spiderman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"Bruce_01_RN\" \"\" \"$AVALON_PROJECTS/batman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma\" 33651880 \"$AVALON_PROJECTS/batman/assets/Bruce/publish/modelDefault/v001/modelDefault.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of rig_v001.ma

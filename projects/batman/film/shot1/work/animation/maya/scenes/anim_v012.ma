@@ -2,8 +2,8 @@
 //Name: animation_v001.ma
 //Last modified: Tue, Jun 27, 2017 12:23:17 PM
 //Codeset: 1252
-file -rdi 1 -ns "Bruce_01_" -rfn "Bruce_01_RN" "$AVALON_PROJECTS/spiderman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
-file -r -ns "Bruce_01_" -dr 1 -rfn "Bruce_01_RN" "$AVALON_PROJECTS/spiderman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
+file -rdi 1 -ns "Bruce_01_" -rfn "Bruce_01_RN" "$AVALON_PROJECTS/batman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
+file -r -ns "Bruce_01_" -dr 1 -rfn "Bruce_01_RN" "$AVALON_PROJECTS/batman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
 requires maya "2015";
 currentUnit -l centimeter -a degree -t pal;
 fileInfo "application" "maya";
@@ -77,9 +77,7 @@ createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "Bruce_01_RN";
 	setAttr -s 3 ".fn";
-	setAttr ".fn[0]" -type "string" "C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/spiderman/assets/Bruce/publish/rigDefault/v002/rigDefault.ma";
-	setAttr ".fn[1]" -type "string" "C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/spiderman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
-	setAttr ".fn[2]" -type "string" "{avalon_projects}/spiderman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
+	setAttr ".fn[0]" -type "string" "$AVALON_PROJECTS/batman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma";
 	setAttr -s 22 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
@@ -199,7 +197,7 @@ createNode objectSet -n "Bruce_01__rigDefault__CON";
 	setAttr ".name" -type "string" "rigDefault";
 	setAttr ".namespace" -type "string" "Bruce_01_";
 	setAttr ".loader" -type "string" "RigLoader";
-	setAttr ".project" -type "string" "spiderman";
+	setAttr ".project" -type "string" "batman";
 	setAttr ".asset" -type "string" "Bruce";
 	setAttr ".subset" -type "string" "rigDefault";
 	setAttr ".version" 2;
@@ -282,6 +280,6 @@ connectAttr "Bruce_01_RN.phl[16]" "Bruce_01__rigDefault__CON.dsm" -na;
 connectAttr "Bruce_01_:rigDefault.iog" "Bruce_01__rigDefault__CON.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 dataStructure -fmt "raw" -as "name=externalContentTable:string=node:string=key:string=upath:uint32=upathcrc:string=rpath:string=roles";
-applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"Bruce_01_RN\" \"\" \"$AVALON_PROJECTS/spiderman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma\" 2903630049 \"C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/spiderman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
+applyMetadata -fmt "raw" -v "channel\nname externalContentTable\nstream\nname v1.0\nindexType numeric\nstructure externalContentTable\n0\n\"Bruce_01_RN\" \"\" \"$AVALON_PROJECTS/batman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma\" 2903630049 \"C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/batman/assets/Bruce/publish/rigDefault/v001/rigDefault.ma\" \"FileRef\"\nendStream\nendChannel\nendAssociations\n" 
 		-scn;
 // End of animation_v001.ma

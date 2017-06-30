@@ -10,9 +10,9 @@
             "task": "modeling"
         },
         "resources": [
-            "resources/Bruce_modelDefault_v001.ma",
-            "resources/Bruce_modelDefault_v002.ma",
-            "resources/Bruce_modelDefault_v003.ma"
+            "scenes/Bruce_modelDefault_v001.ma",
+            "scenes/Bruce_modelDefault_v002.ma",
+            "scenes/Bruce_modelDefault_v003.ma"
         ]
     },
     {
@@ -26,8 +26,8 @@
             "task": "rigging"
         },
         "resources": [
-            "resources/Bruce_rigDefault_v003.ma",
-            "resources/Bruce_rigDefault_v006.ma"
+            "scenes/Bruce_rigDefault_v003.ma",
+            "scenes/Bruce_rigDefault_v006.ma"
         ]
     },
     {
@@ -41,10 +41,10 @@
             "task": "animation"
         },
         "resources": [
-            "resources/shot1_Bruce_01_v002.ma",
-            "resources/shot1_Bruce_01_v006.ma",
-            "resources/shot1_Bruce_01_v012.ma",
-            "resources/shot1_Bruce_01_v034.ma"
+            "scenes/shot1_Bruce_01_v002.ma",
+            "scenes/shot1_Bruce_01_v006.ma",
+            "scenes/shot1_Bruce_01_v012.ma",
+            "scenes/shot1_Bruce_01_v034.ma"
         ]
     }
 ]
