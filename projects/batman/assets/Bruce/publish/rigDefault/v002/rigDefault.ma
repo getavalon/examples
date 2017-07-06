@@ -1,6 +1,6 @@
 //Maya ASCII 2016ff07 scene
 //Name: rigDefault.ma
-//Last modified: Thu, Jul 06, 2017 01:11:20 PM
+//Last modified: Thu, Jul 06, 2017 01:45:29 PM
 //Codeset: 1252
 requires maya "2016ff07";
 currentUnit -l centimeter -a degree -t film;
@@ -10,20 +10,20 @@ fileInfo "version" "2016";
 fileInfo "cutIdentifier" "201603180400-990260-1";
 fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
 createNode transform -n "ROOT";
-	rename -uid "A0225051-42CE-E298-75BE-35B19133A7E3";
+	rename -uid "D48AE868-4CA0-C926-6466-859E4B8A66F8";
 createNode transform -n "input_GRP" -p "ROOT";
-	rename -uid "71D4AE6D-4FA8-B010-AB6B-4D9529AA8499";
+	rename -uid "8B2564C8-4A58-D8F3-1F45-8C9B578DD7D0";
 	setAttr ".v" no;
 createNode transform -n "Bruce_01_:modelDefault" -p "input_GRP";
-	rename -uid "E43232F7-40C0-050F-D10D-F7A72C70E61E";
+	rename -uid "90886108-43EA-1CD7-BA8F-DBB2F2564517";
 createNode transform -n "Bruce_01_:ROOT" -p "Bruce_01_:modelDefault";
-	rename -uid "812E36EB-486A-7B7D-2845-438A3132B374";
+	rename -uid "6E370D7D-4144-69AD-4B62-639FABC31C9D";
 createNode transform -n "Bruce_01_:bruce_PLY" -p "Bruce_01_:ROOT";
-	rename -uid "CA9E129C-4ED4-CF82-AFC3-298FD54170DF";
+	rename -uid "33E26468-4ABE-53ED-6054-CF801D05DFDD";
 	addAttr -ci true -sn "mbID" -ln "mbID" -dt "string";
 	setAttr ".mbID" -type "string" "0001ed4a89b2";
 createNode mesh -n "Bruce_01_:bruce_PLYShape" -p "Bruce_01_:bruce_PLY";
-	rename -uid "ECC77AF0-4FD5-0BBC-1945-718860A0E9C0";
+	rename -uid "4AE0E43E-4565-11F1-12F2-85BD1691D722";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -105,7 +105,7 @@ createNode mesh -n "Bruce_01_:bruce_PLYShape" -p "Bruce_01_:bruce_PLY";
 	setAttr ".vbc" no;
 	setAttr ".ndt" 0;
 createNode parentConstraint -n "bruce_PLY_parentConstraint1" -p "Bruce_01_:bruce_PLY";
-	rename -uid "0F171F96-4519-939A-4625-5888F3477E6C";
+	rename -uid "0ED4E0DF-4AC3-3823-EFE4-5890AAD91F85";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "nurbsCircle1W0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -121,21 +121,21 @@ createNode parentConstraint -n "bruce_PLY_parentConstraint1" -p "Bruce_01_:bruce
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
 createNode transform -n "controls_GRP" -p "ROOT";
-	rename -uid "F1EEFB9B-4A5B-F5B5-936E-AEAB4B5CDC6A";
+	rename -uid "1B2B55AE-4BAD-22CB-86C3-1582AF87F92F";
 createNode transform -n "control_CTL" -p "controls_GRP";
-	rename -uid "1C102F73-4CD3-10F1-6C17-7684BBEBDDC2";
+	rename -uid "BC095A67-40E7-B33F-30CA-C3A28F439FE0";
 createNode nurbsCurve -n "control_CTLShape" -p "control_CTL";
-	rename -uid "1D188423-421A-A78F-AEB3-A6B56B9F027F";
+	rename -uid "99DE00F2-45DE-6CA5-44ED-40AA81565493";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
 createNode transform -n "geometry_GRP" -p "ROOT";
-	rename -uid "2CDA38D6-4609-4B98-47A2-3CA83EBA79F9";
+	rename -uid "A8EBE259-4301-CB81-3298-EDA005822607";
 createNode transform -n "bruce_PLY" -p "geometry_GRP";
-	rename -uid "6BD69672-4B06-6C90-1BDD-418748540E8F";
+	rename -uid "AD80EE6D-4CAE-2EF9-E066-E9A29F713A69";
 	addAttr -ci true -sn "mbID" -ln "mbID" -dt "string";
 	setAttr ".mbID" -type "string" "0001ed4a89b2";
 createNode mesh -n "bruce_PLYShape" -p "bruce_PLY";
-	rename -uid "5347D2D5-43BC-3A2E-2BF4-8DA1D7136467";
+	rename -uid "DD7671BA-45F9-200D-8145-52B09BCA02D6";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -146,18 +146,18 @@ createNode mesh -n "bruce_PLYShape" -p "bruce_PLY";
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".vbc" no;
 	setAttr ".ndt" 0;
-createNode objectSet -n "controls_SET";
-	rename -uid "460BD73B-4B72-8902-0340-54A0BA026424";
-	setAttr ".ihi" 0;
 createNode objectSet -n "out_SET";
-	rename -uid "85177905-4D03-6BB6-A9FE-CC95DE39CA94";
+	rename -uid "3423543F-4B7A-A050-A4FC-28B3BAA65D10";
+	setAttr ".ihi" 0;
+createNode objectSet -n "controls_SET";
+	rename -uid "451FBE70-444B-E154-A990-39A2B46AE613";
 	setAttr ".ihi" 0;
 createNode makeNurbCircle -n "makeNurbCircle1";
-	rename -uid "9919DE27-431B-3FCB-8A81-8BA665434643";
+	rename -uid "73F29386-4C64-C583-5B31-A78C65660EFB";
 	setAttr ".nr" -type "double3" 0 1 0 ;
 	setAttr ".tol" 0.00032808400000000003;
 createNode transformGeometry -n "Bruce_01_:bruce_PLYShape1_transformGeometry";
-	rename -uid "81B37EE8-4602-EB7B-0E93-CE981B0F82F1";
+	rename -uid "A88085FF-4C4A-A81F-AA93-AEB6409DD49C";
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -209,8 +209,8 @@ connectAttr "bruce_PLY_parentConstraint1.w0" "bruce_PLY_parentConstraint1.tg[0].
 		;
 connectAttr "makeNurbCircle1.oc" "control_CTLShape.cr";
 connectAttr "Bruce_01_:bruce_PLYShape1_transformGeometry.og" "bruce_PLYShape.i";
-connectAttr "control_CTL.iog" "controls_SET.dsm" -na;
 connectAttr "bruce_PLY.iog" "out_SET.dsm" -na;
+connectAttr "control_CTL.iog" "controls_SET.dsm" -na;
 connectAttr "Bruce_01_:bruce_PLYShape.o" "Bruce_01_:bruce_PLYShape1_transformGeometry.ig"
 		;
 connectAttr "Bruce_01_:bruce_PLYShape.wm" "Bruce_01_:bruce_PLYShape1_transformGeometry.txf"

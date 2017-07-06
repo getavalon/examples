@@ -1,6 +1,6 @@
 //Maya ASCII 2016ff07 scene
 //Name: modelDefault.ma
-//Last modified: Thu, Jul 06, 2017 01:11:11 PM
+//Last modified: Thu, Jul 06, 2017 01:45:17 PM
 //Codeset: 1252
 requires maya "2016ff07";
 currentUnit -l centimeter -a degree -t film;
@@ -10,13 +10,13 @@ fileInfo "version" "2016";
 fileInfo "cutIdentifier" "201603180400-990260-1";
 fileInfo "osv" "Microsoft Windows 8 Enterprise Edition, 64-bit  (Build 9200)\n";
 createNode transform -n "ROOT";
-	rename -uid "F59D4079-47FC-44BE-0619-23A84439739E";
+	rename -uid "6E370D7D-4144-69AD-4B62-639FABC31C9D";
 createNode transform -n "bruce_PLY" -p "ROOT";
-	rename -uid "08FB5E30-458F-0EF5-F8B9-D79A91E0B054";
+	rename -uid "33E26468-4ABE-53ED-6054-CF801D05DFDD";
 	addAttr -ci true -sn "mbID" -ln "mbID" -dt "string";
 	setAttr ".mbID" -type "string" "0001ed4a89b2";
 createNode mesh -n "bruce_PLYShape" -p "bruce_PLY";
-	rename -uid "D820A711-4BBD-4D45-6407-3DBBD104127C";
+	rename -uid "4AE0E43E-4565-11F1-12F2-85BD1691D722";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;

@@ -1,26 +1,26 @@
 //Maya ASCII 2016ff07 scene
 //Name: Bruce_01.history
-//Last modified: Thu, Jul 06, 2017 01:11:33 PM
+//Last modified: Thu, Jul 06, 2017 01:45:32 PM
 //Codeset: 1252
 requires maya "2016ff07";
 currentUnit -l centimeter -a degree -t pal;
 fileInfo "fileCreationSource" "ExportEdits";
 createNode transform -n "Bruce_01_:rigDefault";
-	rename -uid "DD7EFFA8-41D3-94B5-0F1B-AC8642218026";
+	rename -uid "D9CA29A6-4B4E-7BA2-E78D-A1BF5AE96CCC";
 	setAttr ".rp" -type "double3" 0 0 1.1102230246251565e-016 ;
 	setAttr ".sp" -type "double3" 0 0 1.1102230246251565e-016 ;
+createNode animCurveTL -n "control_CTL_translateY";
+	rename -uid "0C4FBA63-45A7-0F56-CA3E-D4B675E46A78";
+	setAttr ".tan" 18;
+	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 2.4680914011970261 1143 3.675592397880779;
 createNode animCurveTL -n "control_CTL_translateX";
-	rename -uid "D2742BAF-4609-960D-5ABE-3FAEDAA64655";
+	rename -uid "55356647-48EA-E46E-0D0A-248510FC3FFF";
 	setAttr ".tan" 18;
 	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 -0.79188482991782272 1143 3.974692496698256;
 createNode animCurveTL -n "control_CTL_translateZ";
-	rename -uid "99627879-4A14-3D61-916B-C593C0C7C097";
+	rename -uid "95AFCB4F-4A59-0683-BA98-389D6442528D";
 	setAttr ".tan" 18;
 	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 -1.8387420305237947 1143 -0.37865032986438862;
-createNode animCurveTL -n "control_CTL_translateY";
-	rename -uid "196BE53D-46B3-C99B-1809-0C89C3ACE3FF";
-	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 2.4680914011970261 1143 3.675592397880779;
 connectAttr "Bruce_01_:rigDefault.msg" "<root>:Bruce_01_RN.asn[0]";
 connectAttr "Bruce_01_:rigDefault.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na
 		;
@@ -28,7 +28,7 @@ connectAttr "Bruce_01_:makeNurbCircle1.msg" "<root>:Bruce_01__rigDefault__CON.dn
 		 -na;
 connectAttr "Bruce_01_:Bruce_01_:bruce_PLYShape1_transformGeometry.msg" "<root>:Bruce_01__rigDefault__CON.dnsm"
 		 -na;
+connectAttr "control_CTL_translateY.o" "Bruce_01_:control_CTL.ty";
 connectAttr "control_CTL_translateX.o" "Bruce_01_:control_CTL.tx";
 connectAttr "control_CTL_translateZ.o" "Bruce_01_:control_CTL.tz";
-connectAttr "control_CTL_translateY.o" "Bruce_01_:control_CTL.ty";
 // End of Bruce_01.history

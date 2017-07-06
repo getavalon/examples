@@ -1,34 +1,34 @@
 //Maya ASCII 2016ff07 scene
 //Name: Bruce_01.history
-//Last modified: Thu, Jul 06, 2017 01:11:30 PM
+//Last modified: Thu, Jul 06, 2017 01:45:35 PM
 //Codeset: 1252
 requires maya "2016ff07";
 currentUnit -l centimeter -a degree -t pal;
 fileInfo "fileCreationSource" "ExportEdits";
 createNode transform -n "Bruce_01_:rigDefault";
-	rename -uid "5FDD33F7-4C9F-9865-D5C1-C0A215AED52E";
+	rename -uid "D57CA30A-4FF0-3E1C-6508-E0A323832812";
 	setAttr ".rp" -type "double3" 0 0 1.1102230246251565e-016 ;
 	setAttr ".sp" -type "double3" 0 0 1.1102230246251565e-016 ;
-createNode animCurveTL -n "control_CTL_translateX";
-	rename -uid "4BF82253-474B-7716-0A6D-F88C40634BFC";
-	setAttr ".tan" 18;
-	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 -0.79188482991782272 1143 3.974692496698256;
 createNode animCurveTL -n "control_CTL_translateZ";
-	rename -uid "2BD3FAC0-4AC7-A8D0-E6D7-379116F58A21";
+	rename -uid "465C0901-46F7-2A23-6FB4-15B93608E89B";
 	setAttr ".tan" 18;
 	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 -1.8387420305237947 1143 -0.37865032986438862;
 createNode animCurveTL -n "control_CTL_translateY";
-	rename -uid "C1701A2E-4226-1729-291E-F289CB3691B6";
+	rename -uid "9C42C8DA-484A-3FDB-D688-4AAF24B52161";
 	setAttr ".tan" 18;
 	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 2.4680914011970261 1143 3.675592397880779;
+createNode animCurveTL -n "control_CTL_translateX";
+	rename -uid "E47AB8C7-48A9-AF64-2211-CE8A0AD9F2AD";
+	setAttr ".tan" 18;
+	setAttr -s 3 ".ktv[0:2]"  1000 0 1056 -0.79188482991782272 1143 3.974692496698256;
 connectAttr "Bruce_01_:rigDefault.msg" "<root>:Bruce_01_RN.asn[0]";
 connectAttr "Bruce_01_:rigDefault.iog" "<root>:Bruce_01__rigDefault__CON.dsm" -na
 		;
+connectAttr "control_CTL_translateZ.o" "Bruce_01_:control_CTL.tz";
+connectAttr "control_CTL_translateY.o" "Bruce_01_:control_CTL.ty";
+connectAttr "control_CTL_translateX.o" "Bruce_01_:control_CTL.tx";
 connectAttr "Bruce_01_:Bruce_01_:bruce_PLYShape1_transformGeometry.msg" "<root>:Bruce_01__rigDefault__CON.dnsm"
 		 -na;
 connectAttr "Bruce_01_:makeNurbCircle1.msg" "<root>:Bruce_01__rigDefault__CON.dnsm"
 		 -na;
-connectAttr "control_CTL_translateX.o" "Bruce_01_:control_CTL.tx";
-connectAttr "control_CTL_translateZ.o" "Bruce_01_:control_CTL.tz";
-connectAttr "control_CTL_translateY.o" "Bruce_01_:control_CTL.ty";
 // End of Bruce_01.history
