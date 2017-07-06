@@ -1,0 +1,64 @@
+atomVersion 1.0;
+mayaVersion 2016;
+mayaSceneFile C:/Users/marcus/Dropbox/projects/avalon/avalon-examples/projects/batman/film/shot1/work/animation/maya/scenes/anim_v012.ma;
+timeUnit pal;
+linearUnit cm;
+angularUnit deg;
+startTime 1000;
+endTime 1143;
+dagNode {
+  Bruce_01_:control_CTL 4 1;
+  anim translate.translateX translateX 0;
+  animData {
+    input time;
+    output linear;
+    weighted 1;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1000 0 auto auto 1 1 0;
+      1056 -0.79188483 auto auto 1 1 0;
+      1143 3.9746925 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateY translateY 1;
+  animData {
+    input time;
+    output linear;
+    weighted 1;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1000 0 auto auto 1 1 0;
+      1056 2.4680914 auto auto 1 1 0;
+      1143 3.6755924 auto auto 1 1 0;
+    }
+  }
+  anim translate.translateZ translateZ 2;
+  animData {
+    input time;
+    output linear;
+    weighted 1;
+    preInfinity constant;
+    postInfinity constant;
+    keys {
+      1000 0 auto auto 1 1 0;
+      1056 -1.838742 auto auto 1 1 0;
+      1143 -0.37865033 auto auto 1 1 0;
+    }
+  }
+  static rotate.rx rotateX 0;
+  { 18.566186 }
+  static rotate.ry rotateY 1;
+  { 52.55626 }
+  static rotate.rz rotateZ 2;
+  { 52.177767 }
+  static scale.sx scaleX 3;
+  { 1 }
+  static scale.sy scaleY 4;
+  { 1 }
+  static scale.sz scaleZ 5;
+  { 1 }
+  static v visibility 9;
+  { 1 }
+}

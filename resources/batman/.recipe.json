@@ -3,48 +3,45 @@
         "message": "Modeling..",
         "session": {
             "app": "mayapy2016",
-            "project": "batman",
             "asset": "Bruce",
             "silo": "assets",
             "config": "polly",
             "task": "modeling"
         },
         "resources": [
-            "resources/model_v001.ma",
-            "resources/model_v002.ma",
-            "resources/model_v003.ma"
+            "model_v001.ma",
+            "model_v002.ma",
+            "model_v003.ma"
         ]
     },
     {
         "message": "Rigging..",
         "session": {
             "app": "mayapy2016",
-            "project": "batman",
             "asset": "Bruce",
             "silo": "assets",
             "config": "polly",
             "task": "rigging"
         },
         "resources": [
-            "resources/rig_v003.ma",
-            "resources/rig_v006.ma"
+            "rig_v003.ma",
+            "rig_v006.ma"
         ]
     },
     {
         "message": "Animating..",
         "session": {
             "app": "mayapy2016",
-            "project": "batman",
             "asset": "shot1",
             "silo": "film",
             "config": "polly",
             "task": "animation"
         },
         "resources": [
-            "resources/anim_v002.ma",
-            "resources/anim_v006.ma",
-            "resources/anim_v012.ma",
-            "resources/anim_v034.ma"
+            "anim_v002.ma",
+            "anim_v006.ma",
+            "anim_v012.ma",
+            "anim_v034.ma"
         ]
     }
 ]
