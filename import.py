@@ -12,7 +12,10 @@ import sys
 import argparse
 import subprocess
 
+CD = os.path.dirname(os.path.abspath(__file__))
+
 AVALON_DEBUG = bool(os.getenv("AVALON_DEBUG"))
+AVALON_PROJECTS = os.getenv("AVALON_PROJECTS", os.path.join(CD, "projects"))
 
 parser = argparse.ArgumentParser(usage=__doc__)
 parser.add_argument("project", help="name of project to import")
@@ -28,11 +31,10 @@ try:
                           stderr=subprocess.STDOUT,
                           shell=True)
 except subprocess.CalledProcessError:
-    sys.stderr.write("error: requires mongoimport to be on your PATH\n")
+    sys.stderr.write("error: requires 'mongoimport' to be on your PATH\n")
     sys.exit(1)
 
-cd = os.path.dirname(os.path.abspath(__file__))
-fname = os.path.join(cd, "projects", kwargs.project, "db.json")
+fname = os.path.join(AVALON_PROJECTS, kwargs.project, "db.json")
 
 args = [
     "mongoimport",
@@ -52,8 +54,8 @@ returncode = subprocess.call(args, shell=True)
 if returncode == 0:
     print("success")
     print("  project: %s" % kwargs.project)
-    print("  source: %s" % fname)
-    print("  destination: %s" % kwargs.host)
+    print("  from: %s" % fname)
+    print("  to:   %s" % kwargs.host)
 else:
     print("failed")
 
