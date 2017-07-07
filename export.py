@@ -28,8 +28,7 @@ kwargs = parser.parse_args()
 try:
     subprocess.check_call(["mongoimport", "--version"],
                           stdout=subprocess.PIPE,
-                          stderr=subprocess.STDOUT,
-                          shell=True)
+                          stderr=subprocess.STDOUT)
 except subprocess.CalledProcessError:
     sys.stderr.write("error: requires 'mongoimport' to be on your PATH\n")
     sys.exit(1)
@@ -49,7 +48,7 @@ args = [
 if not AVALON_DEBUG:
     args.append("--quiet")
 
-returncode = subprocess.call(args, shell=True)
+returncode = subprocess.call(args)
 
 if returncode == 0:
     print("success")
