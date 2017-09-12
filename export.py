@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """Export a project from the database into an example project
+`AVALON_PROJECTS`, `AVALON_MONGO` and `AVALON_DB` are needed env-var
 
 example:
   $ python export.py batman
-  $ python export.py batman --host localhost:27017 --user marcus
 
 """
 
@@ -11,49 +11,50 @@ import os
 import sys
 import argparse
 import subprocess
+import json
+import pymongo
+from bson import json_util
 
 CD = os.path.dirname(os.path.abspath(__file__))
 
 AVALON_DEBUG = bool(os.getenv("AVALON_DEBUG"))
 AVALON_PROJECTS = os.getenv("AVALON_PROJECTS", os.path.join(CD, "projects"))
+AVALON_MONGO = os.getenv("AVALON_MONGO", "")
+AVALON_DB = os.getenv("AVALON_DB", "")
 
 parser = argparse.ArgumentParser(usage=__doc__)
-parser.add_argument("project", help="name of project to import")
-parser.add_argument("--host", default="localhost:27017", help="Database URI")
-parser.add_argument("--user", default="", help="Database username")
-parser.add_argument("--password", default="", help="Database password")
+parser.add_argument("project", help="name of project to export")
 
 kwargs = parser.parse_args()
 
-try:
-    subprocess.check_call(["mongoimport", "--version"],
-                          stdout=subprocess.PIPE,
-                          stderr=subprocess.STDOUT)
-except subprocess.CalledProcessError:
-    sys.stderr.write("error: requires 'mongoimport' to be on your PATH\n")
-    sys.exit(1)
-
 fname = os.path.join(AVALON_PROJECTS, kwargs.project, "db.json")
 
-args = [
-    "mongoexport",
-    "-h", kwargs.host,
-    "-d", "avalon",
-    "-c", kwargs.project,
-    "-u", kwargs.user,
-    "-p", kwargs.password,
-    "-o", fname,
-]
+mongoURI = AVALON_MONGO
+database = AVALON_DB
+host = AVALON_MONGO.split('@')[-1]
 
-if not AVALON_DEBUG:
-    args.append("--quiet")
+result = False
+try:
+    client = pymongo.MongoClient(mongoURI)
+    db = client[database]
+    proj = db[kwargs.project]
 
-returncode = subprocess.call(args)
+    projdata = proj.find()
+    with open(fname, 'w') as data_file:
+        for data in json.loads(json_util.dumps(projdata)):
+            data_file.write(json.dumps(data) + '\n')
+    result = True
 
-if returncode == 0:
+except Exception as error:
+    if AVALON_DEBUG:
+        raise
+    else:
+        pass
+
+if result:
     print("success")
     print("  project: %s" % kwargs.project)
-    print("  from: %s" % kwargs.host)
+    print("  from: %s" % host)
     print("  to:   %s" % fname)
 else:
     print("failed")
