@@ -30,7 +30,10 @@ fname = os.path.join(AVALON_PROJECTS, kwargs.project, "db.json")
 
 mongoURI = AVALON_MONGO
 database = AVALON_DB
-host = AVALON_MONGO.split('@')[-1]
+if '@' in AVALON_MONGO:
+    host = AVALON_MONGO.split('@')[-1]
+else:
+    host = AVALON_MONGO.split('//')[-1]
 
 result = []
 try:
