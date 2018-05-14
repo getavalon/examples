@@ -29,7 +29,7 @@ try:
     subprocess.check_call(["mongoimport", "--version"],
                           stdout=subprocess.PIPE,
                           stderr=subprocess.STDOUT)
-except subprocess.CalledProcessError:
+except Exception:
     sys.stderr.write("error: requires 'mongoimport' to be on your PATH\n")
     sys.exit(1)
 
