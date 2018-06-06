@@ -8,9 +8,7 @@ example:
 """
 
 import os
-import sys
 import argparse
-import subprocess
 import pymongo
 from bson import json_util
 
@@ -40,7 +38,7 @@ try:
     client = pymongo.MongoClient(mongoURI)
     db = client[database]
     proj = db[kwargs.project]
-    
+
     data = []
     with open(fname) as data_file:
         for line in data_file:
