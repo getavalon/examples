@@ -19,7 +19,7 @@ CD = os.path.dirname(os.path.abspath(__file__))
 AVALON_DEBUG = bool(os.getenv("AVALON_DEBUG"))
 AVALON_PROJECTS = os.getenv("AVALON_PROJECTS", os.path.join(CD, "projects"))
 AVALON_MONGO = os.getenv("AVALON_MONGO", "")
-AVALON_DB = os.getenv("AVALON_DB", "")
+AVALON_DB = os.getenv("AVALON_DB", "avalon")
 
 parser = argparse.ArgumentParser(usage=__doc__)
 parser.add_argument("project", help="name of project to import")
