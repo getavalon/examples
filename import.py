@@ -24,6 +24,14 @@ parser.add_argument("project", help="name of project to import")
 
 kwargs = parser.parse_args()
 
+try:
+    subprocess.check_call(["mongoimport", "--version"],
+                          stdout=subprocess.PIPE,
+                          stderr=subprocess.STDOUT)
+except Exception:
+    sys.stderr.write("error: requires 'mongoimport' to be on your PATH\n")
+    sys.exit(1)
+
 fname = os.path.join(AVALON_PROJECTS, kwargs.project, "db.json")
 
 mongoURI = AVALON_MONGO
