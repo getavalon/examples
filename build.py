@@ -195,6 +195,9 @@ if __name__ == '__main__':
     resourcesdir = os.path.join(cd, "resources", kwargs.project)
     projectdir = os.path.join(cd, "projects", kwargs.project)
     fname = os.path.join(resourcesdir, ".recipe.json")
+    # (davidlatwe) Set this environment variable for later
+    #              querying from database during import/export
+    os.environ['AVALON_PROJECT'] = kwargs.project
 
     try:
         with open(fname) as f:
